@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>HackID-Plus User Manual</title>
@@ -7,6 +7,7 @@
 <body>
 <h2>HackID-Plus User Manual</h2>
 <h4>1. Product Diagram</h4>
+<img src="images/shebeiquantu.jpg" width="600"/>
 <ol>
     <li>Power Switch</li>
     <li>OLED Screen</li>
@@ -29,5 +30,75 @@ Select the features on the OLED by pressing the ‘Up/Down button’.  The featu
     <li>‘Write ID’: write ID to blank card</li>
     <li>‘Update’: update the firmware for the device</li>
 </ul>
+<h4>2.1 Read ID</h4>
+<p>
+    Place the ID card near the antenna area, then highlight the ‘Read ID’ feature and press the ‘selection button’. <br/>
+The following images shows a successful
+</p>
+<img src="images/duka.png"  width="600"/>
+<p style="color:#CC0000">
+The EEPROM can only store up to five groups of ID card numbers, by group we mean VD and ID, <br/>
+when exceed 5  it will start to overwrite the first group of IDs.
+</p>
+<h4>2.2 Emulate ID</h4>
+<p>
+    When you select the ‘Simulate ID’ item and press the ‘Selection button’, you can emulate ID card in three ways:<br/>
+</p>
+<h4>Manually input ID</h4>
+<p>
+    When you select the ‘From Key’ and press the ‘Confirm button’, you can input the ID numbers.<br/>
+    Press the ‘Up button’ to decrease the digit and the ‘Down button’ to increase it.<br/>
+    When you want to input the next number or modifythe previous number, you can press the ‘Left button’ or the ‘Right button’.<br/>
+    After the ID numbers are all set, press ‘selection button’ to start emulate as an ID card. <br/>
+    The device will check the numbers are legal or not (VD: 0~255, ID: 0~4000000000). The first line of the OLED shows the device is emulating or not.
+
+</p>
+<img src="images/jianpanmonika.jpg"  width="600"/>
+<h4>Select ID from EEPROM</h4>
+<p>When you select the ‘From ROM’ and press the ‘Confirm button’, you can get the ID numbers stored in EEPROM.</p>
+<img src="images/congrommoni.jpg" width="600">
+<h4>ID auto increase Attack</h4>
+<p>
+    The ‘Inc Attack’ is short for ID auto-increasing attack, which is basically brute force attack,<br/>
+    the device will automatically increase the ID it’s emulating by a number that can be set by the user,<br/>
+    we call this number ’step’, the interval between each change of the ID can also be set by the user.<br/>
+    After setting ‘step’ and interval, press the ‘selection button’ to start the brute-force attack.<br/>
+    The device will check the numbers are legal or not(VD(vendor ID):0~255,<br/>
+    ID:0~4000000000, step:0~99, time interval:0~9.9 ). The state of simulating from <br/>
+    key is displaying in the first line of the OLED.<br/>
+</p>
+<img src="images/zizenggongji.jpg"  width="600">
+<h4>2.3 Write ID</h4>
+<p>
+    When you select the ‘emulate ID’ feature and press the ‘selection button’, you can set ID to emulate in two ways.
+</p>
+<h4>Manually input the ID to write</h4>
+<p>
+    Like in the emulate ID card section, you can manually input the ID to write to a blank writable card.<br/>
+    Before you press the ‘Selection button’ to write a card, you must put the writable card (eg.T5577) near the 125 KHz antenna region.<br/>
+</p>
+<img src="images/jianpanxieka.jpg" width="600"/>
+<h4>Select an ID from EEPROM to write</h4>
+<p>
+    Like simulating ID card from ROM, you can refer to the previous chapter.<br/>
+    Before you press the ‘Confirm button’, you must put the writable card (eg.T5577) near the 125 KHz antenna region.<br/>
+</p>
+<img src="images/romxieka.png" width="600"/>
+<h4>2.4 Update</h4>
+<p>
+    In updating mode you must plug in the USB cable into the Micro USB, and use the software which <br/>
+    can be found by scanning the QR code below.
+</p>
+<img src="images/Picture1.png">
+
+<p>
+    When you need to update the firmware, select this feature. First line of the OLED is the software version,  <br/>
+    and the second line of the OLED is the hardware version. Select ‘Yes’ to update, and ‘No’ to return.<br/>
+
+</p>
+<img src="images/gujiangengxin.png"  width="600">
+<p style="color:#CC0000">
+    Warning! If you don’t want to update, please don’t select ‘Yes’ in the update interface.
+</p>
 </body>
 </html>
