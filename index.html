@@ -100,5 +100,43 @@ when exceed 5  it will start to overwrite the first group of IDs.
 <p style="color:#CC0000">
     Warning! If you don’t want to update, please don’t select ‘Yes’ in the update interface.
 </p>
+<h4>上位机升级固件操作步骤简要</h4>
+<h4>Steps to update the HackID</h4>
+<p>
+    第一步，操作HackID-Plus设备进入bootloader模式：选择主界面“4.Update”—>Yes<br/>
+    Step 1: On the device screen,Navigate to the update page and enter update mode.<br/>
+    第二步，通过microUSB线将设备插入windows电脑USB口，打开上位机升级软件<br/>
+    Step 2：Connect HackID to a windows PC using a microUSB cable and then open the hackidupdatingtool.exe .<br/>
+</p>
+<img src="images/step1.png"  width="300">
+<p>
+    第三步：点击刷新按钮，将会出现设备信息，说明设备连接成功<br/>
+    Step 3:Click on the refresh button to see if device information appear which indicate the device is successfully connected.<br/>
+</p>
+<img src="images/step2.png"  width="300">
+<p>
+    第四步：选择烧写的文件（.bin），点击upgrade即可<br/>
+    Step 4：Select firmware（the x.bin file）and click on the upgrade button.<br/>
+</p>
+<img src="images/step3.png"  width="300">
+<h5>注意事项：</h5>
+<ul>
+    <li>设备开机后没有显示可能电池没电，插上USB充电即可</li>
+    <li>进入bootloader模式之后再插入USB，否则识别不了，或者进入boot之后重新插拔一次USB也可以</li>
+    <li>烧写完成后，可简单测试一下读卡，模拟卡，写卡功能是否正常（写卡需要T5577类型卡），由于装配时间紧，在公司测试不完全</li>
+    <li>每个设备固件更新在20s左右，挺快就能完事</li>
+</ul>
+<h5>Note:</h5>
+<ul>
+    <li>If the device doesn't light up when turned on ,please try to charge it by connecting <br/>
+        it to a computer or charger via a USB cable.</li>
+    <li>The device must be in update mode(ie. bootloader mode) before pluging in the USB cable,<br/>
+        if you connected the device to computer before entering into update mode, please unplug<br/>
+        and then plug in the USB cable ,otherwise the computer might not be able to recognize the device.</li>
+    <li>After updating the device ，please check the features to see if the device is<br/>
+        working as expected，eg.Try to write a T5577 tag/card.</li>
+    <li>The update process should usually takes approximatly 20 seconds.</li>
+
+</ul>
 </body>
 </html>
